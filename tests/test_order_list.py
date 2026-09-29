@@ -5,7 +5,8 @@ from urls import order_list
 @allure.title('Тест на проверку списка заказов')
 
 @allure.description("Тестируем позитивный сценарий: возвращается список заказов")
-def test_order_create():
+def test_get_order_list():
     response = requests.get(order_list)
     assert response.status_code == 200
     assert "orders" in response.json()
+    assert response.json()["orders"] is not None
