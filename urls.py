@@ -1,0 +1,5 @@
+courier = 'https://qa-scooter.education-services.ru/api/v1/courier'
+login = 'https://qa-scooter.education-services.ru/api/v1/courier/login'
+order = 'https://qa-scooter.education-services.ru/api/v1/orders'
+order_list = 'https://qa-scooter.education-services.ru/api/v1/orders'
+delete_courier_url ='https://qa-scooter.education-services.ru/api/v1/courier/'
