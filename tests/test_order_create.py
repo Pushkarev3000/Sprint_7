@@ -3,9 +3,9 @@ import requests
 import pytest
 from urls import order
 
-@allure.title('Тесты на проверку создание заказа')
+@allure.feature('Тесты на проверку создание заказа')
 
-@allure.description("Тестируем позитивный сценарий: успешное создание заказа с разными комбинациями цветов")
+@allure.story("Тестируем позитивный сценарий: успешное создание заказа с разными комбинациями цветов")
 @pytest.mark.parametrize('body',
                          [{"color":["BLACK","GREY"]},
                           {"color":["GREY"]},
