@@ -8,10 +8,12 @@ from urls import courier
 class TestCourierCreation:
 
     @allure.story("Тестируем позитивный сценарий: успешное создание")
-    def test_create_new_courier(self):
-        response = register_new_courier_and_return_login_password()[2]
+    def test_create_new_courier(self, delete_courier):
+        list, response  = register_new_courier_and_return_login_password()[1:3]
         assert response.status_code == 201
         assert response.json() == {'ok': True}
+        delete_courier(list)
+
 
     @allure.story("Тестируем негативный сценарий: передаваемый логин уже занят")
     def test_create_double_courier(self, created_courier):
