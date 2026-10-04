@@ -1,0 +1,5 @@
+main_url = 'https://qa-scooter.education-services.ru'
+courier = f'{main_url}/api/v1/courier'
+login = f'{main_url}/api/v1/courier/login'
+order = f'{main_url}/api/v1/orders'
+order_list = f'{main_url}/api/v1/orders'
